@@ -451,7 +451,7 @@ p.body{
 }
 .mkt.b2c .deploy{border-color:var(--line);}
 
-/* ---------- SLIDE 9 TRACTION ---------- */
+/* ---------- SLIDE 10 WHY NOW (metrics) ---------- */
 .metrics-grid{
   display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:36px;
   background:var(--line);border:1px solid var(--line);
@@ -473,7 +473,7 @@ p.body{
 .thesis-box .q em{color:var(--mustard);font-weight:400;}
 .thesis-box .attr{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.18em;color:var(--mustard);opacity:0.9;text-transform:uppercase;text-align:right;white-space:nowrap;}
 
-/* ---------- SLIDE 10 THE ASK ---------- */
+/* ---------- SLIDE 11 THE ASK ---------- */
 .ask-layout{
   display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px;
 }
@@ -510,7 +510,7 @@ p.body{
   font-style:normal;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.15em;color:var(--mustard);margin-top:14px;display:inline-block;font-weight:600;
 }
 
-/* ---------- SLIDE 11 FOUNDERS / TEAM ---------- */
+/* ---------- SLIDE 12 FOUNDERS / TEAM ---------- */
 .neural-arc-statement{
   display:flex;gap:18px;margin-top:24px;align-items:stretch;
   padding:18px 22px;background:rgba(122,40,40,0.06);border-radius:4px;
@@ -578,6 +578,83 @@ p.body{
 }
 .founder:nth-child(2) .founder-tag{color:var(--mustard-deep);}
 
+.awards{
+  margin-top:14px;padding:12px 14px;
+  background:rgba(200,153,51,0.1);
+  border-left:2px solid var(--mustard-deep);
+  border-radius:0 3px 3px 0;
+  display:flex;flex-direction:column;gap:6px;
+}
+.awards-label{
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--mustard-deep);font-weight:600;
+  margin-bottom:2px;
+}
+.award{
+  font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+  font-size:13px;line-height:1.35;color:var(--ink);
+  display:flex;align-items:baseline;gap:8px;
+}
+.award-mark{
+  color:var(--mustard-deep);font-size:9px;flex-shrink:0;
+  font-style:normal;
+}
+
+/* ---------- SLIDE 9 TRACTION ---------- */
+.traction-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;
+}
+.t-tile{
+  background:var(--paper);border:1px solid var(--line);border-radius:6px;
+  padding:28px 26px;display:flex;flex-direction:column;gap:8px;
+  position:relative;overflow:hidden;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.t-tile::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--oxblood);
+}
+.t-tile.t-tile-2::before{background:var(--sage-deep);}
+.t-tile.t-tile-3::before{background:var(--mustard-deep);}
+
+.t-tile::after{
+  content:"";position:absolute;top:-30px;right:-30px;width:120px;height:120px;
+  background:radial-gradient(circle,rgba(122,40,40,0.06) 0,transparent 70%);
+  border-radius:50%;pointer-events:none;
+}
+.t-tile.t-tile-2::after{background:radial-gradient(circle,rgba(125,139,106,0.08) 0,transparent 70%);}
+.t-tile.t-tile-3::after{background:radial-gradient(circle,rgba(200,153,51,0.1) 0,transparent 70%);}
+
+.t-mark{
+  font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+  font-size:24px;color:var(--oxblood);line-height:1;opacity:0.7;
+}
+.t-tile.t-tile-2 .t-mark{color:var(--sage-deep);}
+.t-tile.t-tile-3 .t-mark{color:var(--mustard-deep);}
+
+.t-num{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:74px;line-height:1;letter-spacing:-0.04em;
+  color:var(--ink);margin-top:6px;
+  position:relative;z-index:1;
+}
+.t-unit{
+  font-size:34px;font-weight:400;font-style:italic;color:var(--oxblood);letter-spacing:-0.02em;
+}
+.t-tile.t-tile-2 .t-unit{color:var(--sage-deep);}
+.t-tile.t-tile-3 .t-unit{color:var(--mustard-deep);}
+
+.t-label{
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--oxblood);font-weight:600;margin-top:6px;
+}
+.t-tile.t-tile-2 .t-label{color:var(--sage-deep);}
+.t-tile.t-tile-3 .t-label{color:var(--mustard-deep);}
+
+.t-desc{
+  font-size:13px;line-height:1.5;color:var(--ink-soft);margin-top:4px;
+}
+
 /* ---------- NAV DOTS ---------- */
 .nav{
   position:fixed;right:24px;top:50%;transform:translateY(-50%);
@@ -610,6 +687,8 @@ p.body{
   .cover h1 .tiny{font-size:32px;}
   h2.title{font-size:40px;}
   .orbit{width:520px;height:520px;right:-220px;}
+  .t-num{font-size:60px;}
+  .t-unit{font-size:28px;}
 }
 
 /* ---------- TABLET (≤1024px) ---------- */
@@ -662,6 +741,14 @@ p.body{
   /* Markets */
   .market-grid{grid-template-columns:repeat(2,1fr);}
   .mkt h4{font-size:30px;}
+
+  /* Traction */
+  .traction-grid{grid-template-columns:repeat(3,1fr);gap:14px;}
+  .t-tile{padding:22px 20px;}
+  .t-num{font-size:48px;}
+  .t-unit{font-size:22px;}
+  .t-label{font-size:10px;}
+  .t-desc{font-size:12.5px;}
 
   /* Metrics */
   .metrics-grid{grid-template-columns:repeat(2,1fr);}
@@ -775,6 +862,15 @@ p.body{
   .mkt h4{font-size:28px;}
   .mkt .desc{font-size:13px;}
 
+  /* Traction */
+  .traction-grid{grid-template-columns:1fr;gap:14px;margin-top:24px;}
+  .t-tile{padding:22px 20px;}
+  .t-num{font-size:46px;}
+  .t-unit{font-size:22px;}
+  .t-mark{font-size:20px;}
+  .t-label{font-size:10px;}
+  .t-desc{font-size:12.5px;}
+
   /* Metrics */
   .metrics-grid{grid-template-columns:1fr 1fr;margin-top:28px;}
   .metric{padding:22px 18px;}
@@ -805,6 +901,9 @@ p.body{
   .founder-name .n{font-size:21px;}
   .founder-name .r{font-size:9.5px;}
   .bio li{font-size:13px;}
+  .awards{padding:10px 12px;}
+  .awards-label{font-size:9px;}
+  .award{font-size:12.5px;}
 
   /* Hide nav dots on small screens */
   .nav{display:none;}
@@ -844,6 +943,10 @@ p.body{
   .orch-text .stat .n{font-size:44px;}
   .metric .v{font-size:36px;}
 
+  /* Traction */
+  .t-num{font-size:40px;}
+  .t-unit{font-size:18px;}
+
   /* Mkt heading */
   .mkt h4{font-size:24px;}
 
@@ -867,9 +970,10 @@ p.body{
   <a href="#s6" title="Competitive"></a>
   <a href="#s7" title="Hermes x Bees Agents"></a>
   <a href="#s8" title="Markets"></a>
-  <a href="#s9" title="Why Now"></a>
-  <a href="#s10" title="The Ask"></a>
-  <a href="#s11" title="The Team"></a>
+  <a href="#s9" title="Traction"></a>
+  <a href="#s10" title="Why Now"></a>
+  <a href="#s11" title="The Ask"></a>
+  <a href="#s12" title="The Team"></a>
 </nav>
 
 <div class="deck">
@@ -877,7 +981,7 @@ p.body{
   <!-- ============== SLIDE 1: COVER ============== -->
   <section class="slide cover" id="s1">
     <span class="slide-tag"><span class="tag-num">01</span><span class="tag-bar"></span>Cover</span>
-    <span class="slide-num">001 / 011</span>
+    <span class="slide-num">001 / 012</span>
 
     <div class="orbit">
       <div class="orbit-core"></div>
@@ -914,7 +1018,7 @@ p.body{
   <!-- ============== SLIDE 2: THE PROBLEM ============== -->
   <section class="slide" id="s2">
     <span class="slide-tag"><span class="tag-num">02</span><span class="tag-bar"></span>The Gap</span>
-    <span class="slide-num">002 / 011</span>
+    <span class="slide-num">002 / 012</span>
 
     <div class="eyebrow">What the market still hasn't solved</div>
     <h2 class="title">Enterprises are <em>marrying</em> one model<br>and paying for the wedding every day.</h2>
@@ -957,7 +1061,7 @@ p.body{
   <!-- ============== SLIDE 3: SOLUTION ============== -->
   <section class="slide" id="s3">
     <span class="slide-tag"><span class="tag-num">03</span><span class="tag-bar"></span>Helium Teams</span>
-    <span class="slide-num">003 / 011</span>
+    <span class="slide-num">003 / 012</span>
 
     <div class="eyebrow">Introducing</div>
     <h2 class="title">A single workspace that <em>orchestrates</em> the entire AI stack.<br>Governed, integrated, and owned by you.</h2>
@@ -1041,7 +1145,7 @@ p.body{
   <!-- ============== SLIDE 4: ORCHESTRATOR DEEP DIVE ============== -->
   <section class="slide" id="s4">
     <span class="slide-tag"><span class="tag-num">04</span><span class="tag-bar"></span>The Orchestrator</span>
-    <span class="slide-num">004 / 011</span>
+    <span class="slide-num">004 / 012</span>
 
     <div class="eyebrow">Our defensible moat</div>
     <h2 class="title">Right model. Right task.<br><em>Right cost.</em> Always.</h2>
@@ -1204,7 +1308,7 @@ p.body{
   <!-- ============== SLIDE 5: TEAM WORKSPACE (UNIQUE) ============== -->
   <section class="slide" id="s5">
     <span class="slide-tag"><span class="tag-num">05</span><span class="tag-bar"></span>Team Workspace</span>
-    <span class="slide-num">005 / 011</span>
+    <span class="slide-num">005 / 012</span>
 
     <div class="eyebrow">What nobody else has built</div>
     <h2 class="title">A <em>common brain</em> for your team.<br>With strict permissions, total audit, zero leakage.</h2>
@@ -1325,7 +1429,7 @@ p.body{
   <!-- ============== SLIDE 6: COMPETITIVE TABLE ============== -->
   <section class="slide" id="s6">
     <span class="slide-tag"><span class="tag-num">06</span><span class="tag-bar"></span>Competitive Landscape</span>
-    <span class="slide-num">006 / 011</span>
+    <span class="slide-num">006 / 012</span>
 
     <div class="eyebrow">Where we stand</div>
     <h2 class="title">The only platform that does all of it.<br>In <em>one</em> place. With <em>your</em> governance.</h2>
@@ -1445,7 +1549,7 @@ p.body{
   <!-- ============== SLIDE 7: HERMES AGENTS ============== -->
   <section class="slide" id="s7">
     <span class="slide-tag"><span class="tag-num">07</span><span class="tag-bar"></span>Hermes x Bees</span>
-    <span class="slide-num">007 / 011</span>
+    <span class="slide-num">007 / 012</span>
 
     <div class="eyebrow">The autonomous layer</div>
     <h2 class="title">When orchestration isn't enough,<br>Hermes x Bees <em>does the work itself</em>.</h2>
@@ -1521,7 +1625,7 @@ p.body{
   <!-- ============== SLIDE 8: MARKETS & DEPLOYMENT ============== -->
   <section class="slide" id="s8">
     <span class="slide-tag"><span class="tag-num">08</span><span class="tag-bar"></span>Market &amp; Deployment</span>
-    <span class="slide-num">008 / 011</span>
+    <span class="slide-num">008 / 012</span>
 
     <div class="eyebrow">Who we serve</div>
     <h2 class="title">Three motions. One platform.<br><em>Cloud</em>, <em>on-premises</em>, or <em>hybrid</em>.</h2>
@@ -1563,10 +1667,53 @@ p.body{
     </div>
   </section>
 
-  <!-- ============== SLIDE 9: WHY NOW / METRICS ============== -->
+  <!-- ============== SLIDE 9: TRACTION ============== -->
   <section class="slide" id="s9">
-    <span class="slide-tag"><span class="tag-num">09</span><span class="tag-bar"></span>Why Now</span>
-    <span class="slide-num">009 / 011</span>
+    <span class="slide-tag"><span class="tag-num">09</span><span class="tag-bar"></span>Traction</span>
+    <span class="slide-num">009 / 012</span>
+
+    <div class="eyebrow">Where we stand today</div>
+    <h2 class="title">Already in market.<br><em>Already paying.</em></h2>
+    <p class="lede" style="margin-top:14px;">We are not pitching a thesis. Helium is shipping, customers are deployed, partners are co-selling, and users are paying. The category is just opening up, and we are already inside it.</p>
+
+    <div class="traction-grid">
+      <div class="t-tile t-tile-1">
+        <div class="t-mark">i.</div>
+        <div class="t-num">$9.37<span class="t-unit">M</span></div>
+        <div class="t-label">Sales Pipeline</div>
+        <div class="t-desc">Active pipeline co-developed with channel and technology partners. Validated, not cold.</div>
+      </div>
+
+      <div class="t-tile t-tile-2">
+        <div class="t-mark">ii.</div>
+        <div class="t-num">73,000<span class="t-unit">+</span></div>
+        <div class="t-label">Users on Platform</div>
+        <div class="t-desc">Real users engaging with Helium today across individual and team workspaces. Engagement compounding monthly.</div>
+      </div>
+
+      <div class="t-tile t-tile-3">
+        <div class="t-mark">iii.</div>
+        <div class="t-num">4<span class="t-unit"> live</span></div>
+        <div class="t-label">B2B Clients on Teams</div>
+        <div class="t-desc">Enterprise customers deployed and paying on Helium Teams. Reference-able, expandable, contracted.</div>
+      </div>
+    </div>
+
+    <div class="thesis-box" style="margin-top:28px;">
+      <div class="q">"Most enterprise AI pitches still begin with 'imagine if'. <em>Ours begins with a customer list.</em>"</div>
+      <div class="attr">Helium AI · 2026</div>
+    </div>
+
+    <div class="slide-foot">
+      <span>Traction · Live Deployments &amp; Pipeline</span>
+      <span>Section IX</span>
+    </div>
+  </section>
+
+  <!-- ============== SLIDE 10: WHY NOW / METRICS ============== -->
+  <section class="slide" id="s10">
+    <span class="slide-tag"><span class="tag-num">10</span><span class="tag-bar"></span>Why Now</span>
+    <span class="slide-num">010 / 012</span>
 
     <div class="eyebrow">The numbers behind the conviction</div>
     <h2 class="title">A category-defining window.<br>Open <em>now</em>. Closing <em>fast</em>.</h2>
@@ -1602,14 +1749,14 @@ p.body{
 
     <div class="slide-foot">
       <span>Traction &amp; Market Timing</span>
-      <span>Section IX</span>
+      <span>Section X</span>
     </div>
   </section>
 
-  <!-- ============== SLIDE 10: THE ASK ============== -->
-  <section class="slide" id="s10">
-    <span class="slide-tag"><span class="tag-num">10</span><span class="tag-bar"></span>Partnership</span>
-    <span class="slide-num">010 / 011</span>
+  <!-- ============== SLIDE 11: THE ASK ============== -->
+  <section class="slide" id="s11">
+    <span class="slide-tag"><span class="tag-num">11</span><span class="tag-bar"></span>Partnership</span>
+    <span class="slide-num">011 / 012</span>
 
     <div class="eyebrow">Why partner with Helium</div>
     <h2 class="title">We're not betting on <em>a</em> model.<br>We're betting on <em>every</em> model.</h2>
@@ -1674,14 +1821,14 @@ p.body{
 
     <div class="slide-foot">
       <span>Helium AI by Neural Arc Inc. · Confidential · 2026</span>
-      <span>Section X</span>
+      <span>Section XI</span>
     </div>
   </section>
 
-  <!-- ============== SLIDE 11: FOUNDERS / TEAM ============== -->
-  <section class="slide" id="s11">
-    <span class="slide-tag"><span class="tag-num">11</span><span class="tag-bar"></span>The Team</span>
-    <span class="slide-num">011 / 011</span>
+  <!-- ============== SLIDE 12: FOUNDERS / TEAM ============== -->
+  <section class="slide" id="s12">
+    <span class="slide-tag"><span class="tag-num">12</span><span class="tag-bar"></span>The Team</span>
+    <span class="slide-num">012 / 012</span>
 
     <div class="eyebrow">Behind Helium AI</div>
     <h2 class="title">Built by operators who've <em>shipped</em>,<br>scaled, and led at the <em>highest tier</em>.</h2>
@@ -1724,6 +1871,11 @@ p.body{
           <li>Former CDO &amp; CIO at Barclays, CDAO at Macquarie, Global Head of Data &amp; Analytics at Rio Tinto</li>
           <li>Previously at EY, Deloitte, and PwC across enterprise data and AI transformation</li>
         </ul>
+        <div class="awards">
+          <div class="awards-label">Awards &amp; Recognition</div>
+          <div class="award"><span class="award-mark">★</span>Winner, Top 100 Women in Data, 2025</div>
+          <div class="award"><span class="award-mark">★</span>Top 10 Global Data, Analytics &amp; AI Leaders, 2024</div>
+        </div>
         <div class="founder-tag">AI · Data · Enterprise Delivery</div>
       </div>
     </div>
