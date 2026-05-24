@@ -601,12 +601,258 @@ p.body{
   }
   .nav{display:none;}
 }
+
+/* ---------- LAPTOP (≤1240px) ---------- */
 @media (max-width:1240px){
   .slide{padding:48px 40px;}
   h1.display{font-size:72px;}
   .cover h1{font-size:88px;}
   .cover h1 .tiny{font-size:32px;}
   h2.title{font-size:40px;}
+  .orbit{width:520px;height:520px;right:-220px;}
+}
+
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width:1024px){
+  body{padding:24px 0;}
+  .deck{gap:28px;}
+  .slide{
+    width:100%;
+    max-width:94vw;
+    min-height:auto;
+    padding:56px 44px 64px;
+  }
+  .slide-tag,.slide-num{top:22px;}
+  .slide-tag{left:28px;}
+  .slide-num{right:28px;}
+  .slide-foot{left:28px;right:28px;bottom:20px;}
+
+  h1.display{font-size:60px;}
+  h2.title{font-size:36px;line-height:1.05;}
+  h3.sub{font-size:22px;}
+  .lede{font-size:18px;line-height:1.45;}
+
+  /* Cover */
+  .cover h1{font-size:72px;}
+  .cover h1 .tiny{font-size:28px;}
+  .cover-lede{font-size:20px;}
+  .cover-meta{gap:36px;flex-wrap:wrap;}
+  .orbit{width:440px;height:440px;right:-200px;opacity:0.5;}
+  .orbit::before{inset:50px;}
+  .orbit::after{inset:130px;}
+  .orbit-core{width:96px;height:96px;}
+
+  /* Solution */
+  .solution-hero{grid-template-columns:1fr;gap:32px;}
+  .stack-vis{min-height:auto;}
+
+  /* Orchestrator */
+  .orch-layout{grid-template-columns:1fr;gap:32px;}
+  .orch-text .stat .n{font-size:64px;}
+  .orch-vis{min-height:auto;}
+
+  /* Teams */
+  .teams-hero{grid-template-columns:1fr;gap:28px;}
+  .teams-vis{min-height:auto;padding:24px;}
+
+  /* Hermes */
+  .hermes-layout{grid-template-columns:1fr;gap:28px;}
+  .hermes-vis{min-height:340px;padding:24px;}
+
+  /* Markets */
+  .market-grid{grid-template-columns:repeat(2,1fr);}
+  .mkt h4{font-size:30px;}
+
+  /* Metrics */
+  .metrics-grid{grid-template-columns:repeat(2,1fr);}
+  .metric .v{font-size:52px;}
+
+  /* Ask */
+  .ask-layout{grid-template-columns:1fr;gap:28px;}
+  .ask-card h3{font-size:36px;}
+
+  /* Thesis */
+  .thesis-box{flex-direction:column;align-items:flex-start;gap:16px;}
+  .thesis-box .q{font-size:19px;}
+  .thesis-box .attr{text-align:left;}
+
+  /* Founders */
+  .founders-grid{grid-template-columns:1fr;gap:20px;}
+
+  /* Nav dots */
+  .nav{right:14px;gap:8px;}
+  .nav a{width:7px;height:7px;}
+}
+
+/* ---------- MOBILE LANDSCAPE / SMALL TABLET (≤768px) ---------- */
+@media (max-width:768px){
+  body{padding:16px 0;}
+  .deck{gap:20px;}
+  .slide{
+    max-width:96vw;
+    padding:64px 24px 56px;
+    border-radius:4px;
+  }
+  .slide-tag,.slide-num{top:18px;font-size:10px;}
+  .slide-tag{left:20px;}
+  .slide-num{right:20px;}
+  .slide-foot{left:20px;right:20px;bottom:16px;font-size:9px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:0.2em;margin-bottom:14px;}
+  h1.display{font-size:44px;}
+  h2.title{font-size:28px;line-height:1.1;margin-bottom:10px;}
+  h3.sub{font-size:19px;}
+  .lede{font-size:16px;line-height:1.5;}
+  p.body{font-size:14px;}
+
+  /* Cover */
+  .cover h1{font-size:48px;line-height:0.98;}
+  .cover h1 .tiny{font-size:22px;margin-top:6px;}
+  .cover-lede{font-size:16px;max-width:100%;}
+  .cover-mark{font-size:18px;}
+  .cover-meta{gap:20px 28px;padding-top:18px;}
+  .cover-meta .item .v{font-size:16px;}
+  .cover-meta .item .k{font-size:9px;}
+  .orbit{width:300px;height:300px;right:-150px;opacity:0.35;}
+  .orbit::before{inset:36px;}
+  .orbit::after{inset:90px;}
+  .orbit-core{width:68px;height:68px;}
+
+  /* Problem grid */
+  .problem-grid{grid-template-columns:1fr;margin-top:24px;}
+  .prob{padding:20px 18px 22px;}
+  .prob .num{font-size:32px;}
+  .prob .h{font-size:17px;}
+  .prob .d{font-size:13px;}
+  .prob[style*="grid-column"]{grid-column:auto !important;}
+
+  /* Pillars */
+  .pillar{padding:14px 16px;gap:14px;}
+  .pillar .ico{font-size:28px;width:28px;}
+  .pillar .t{font-size:15px;}
+  .pillar .x{font-size:12.5px;}
+
+  /* Stack vis */
+  .stack-vis{padding:20px 16px;}
+  .layer{padding:10px 12px;gap:10px;}
+  .layer .lab{width:64px;font-size:8.5px;}
+  .layer .name{font-size:13px;}
+  .layer .name span{display:block;margin-left:0;margin-top:2px;font-size:11px;}
+  .model-chip{font-size:8px;padding:3px 6px;}
+
+  /* Orchestrator */
+  .orch-text .stat{flex-direction:column;gap:6px;align-items:flex-start;}
+  .orch-text .stat .n{font-size:52px;}
+  .orch-text .stat .l{max-width:100%;font-size:13px;}
+  .orch-bullets div{font-size:12.5px;}
+  .orch-tagline{font-size:16px;}
+  .orch-vis{padding:20px 16px;}
+
+  /* Teams features */
+  .tf{padding:14px 16px;}
+  .tf .t{font-size:15px;}
+  .tf .x{font-size:12.5px;}
+
+  /* Competitive table - horizontal scroll */
+  .compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .compare{min-width:640px;font-size:12px;}
+  .compare thead th{font-size:9.5px;padding:10px 8px;}
+  .compare tbody td{font-size:12px;padding:9px 8px;}
+  .compare tbody td:first-child{font-size:13px;padding-left:12px;}
+  .compare tbody tr.hero-row td:first-child{font-size:13px;}
+  .compare-legend{flex-wrap:wrap;gap:12px;font-size:9.5px;}
+  .compare-legend span[style*="margin-left:auto"]{margin-left:0 !important;width:100%;}
+
+  /* Hermes */
+  .hermes-vis{min-height:280px;padding:18px;}
+  .hf{padding:14px 16px;}
+  .hf .t{font-size:15px;}
+  .hf .x{font-size:12.5px;}
+
+  /* Markets */
+  .market-grid{grid-template-columns:1fr;gap:16px;}
+  .mkt{padding:24px 22px;}
+  .mkt h4{font-size:28px;}
+  .mkt .desc{font-size:13px;}
+
+  /* Metrics */
+  .metrics-grid{grid-template-columns:1fr 1fr;margin-top:28px;}
+  .metric{padding:22px 18px;}
+  .metric .v{font-size:42px;}
+  .metric .v .small{font-size:18px;}
+  .metric .x{font-size:11.5px;}
+  .metric .k{font-size:9.5px;}
+
+  /* Thesis */
+  .thesis-box{padding:22px 22px;}
+  .thesis-box .q{font-size:17px;}
+
+  /* Ask */
+  .why-row{padding:10px 0;gap:12px;}
+  .why-row .n{font-size:10.5px;width:24px;}
+  .why-row .c .t{font-size:15px;}
+  .why-row .c .x{font-size:12px;}
+  .ask-card{padding:24px 22px;}
+  .ask-card h3{font-size:30px;}
+  .ask-card .li{font-size:12.5px;}
+
+  /* Founders */
+  .neural-arc-statement{padding:16px 18px;gap:14px;}
+  .neural-arc-statement .txt{font-size:15px;}
+  .founder{padding:22px 22px;}
+  .founder-head{gap:14px;}
+  .avatar{width:54px;height:54px;font-size:18px;}
+  .founder-name .n{font-size:21px;}
+  .founder-name .r{font-size:9.5px;}
+  .bio li{font-size:13px;}
+
+  /* Hide nav dots on small screens */
+  .nav{display:none;}
+}
+
+/* ---------- MOBILE PORTRAIT (≤480px) ---------- */
+@media (max-width:480px){
+  body{padding:12px 0;}
+  .deck{gap:16px;}
+  .slide{
+    max-width:97vw;
+    padding:56px 18px 52px;
+  }
+  .slide-tag,.slide-num{top:14px;font-size:9px;letter-spacing:0.12em;}
+  .slide-tag{left:14px;}
+  .slide-num{right:14px;}
+  .slide-tag .tag-bar{width:12px;}
+  .slide-foot{left:14px;right:14px;bottom:12px;font-size:8.5px;letter-spacing:0.12em;}
+
+  h1.display{font-size:36px;}
+  h2.title{font-size:24px;}
+  h3.sub{font-size:17px;}
+  .lede{font-size:14.5px;}
+
+  /* Cover */
+  .cover h1{font-size:40px;}
+  .cover h1 .tiny{font-size:18px;}
+  .cover-lede{font-size:14.5px;}
+  .cover-meta{gap:14px 22px;}
+  .cover-meta .item .v{font-size:14px;}
+  .orbit{width:240px;height:240px;right:-130px;opacity:0.3;}
+  .orbit::before{inset:28px;}
+  .orbit::after{inset:72px;}
+  .orbit-core{width:54px;height:54px;}
+
+  /* Stat numbers */
+  .orch-text .stat .n{font-size:44px;}
+  .metric .v{font-size:36px;}
+
+  /* Mkt heading */
+  .mkt h4{font-size:24px;}
+
+  /* Ask card */
+  .ask-card h3{font-size:26px;}
+
+  /* Founders */
+  .founder{padding:20px 18px;}
+  .founder-name .n{font-size:19px;}
 }
 </style>
 </head>
